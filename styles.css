@@ -1397,10 +1397,10 @@ ul, ol { list-style: none; }
 
 /* #promotions — full-bleed section with parallax background */
 #promotions {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
   position: relative;
   overflow: hidden;
   border-color: transparent;
@@ -1435,10 +1435,10 @@ ul, ol { list-style: none; }
 
 /* #applause — stretched full-width for the team photo */
 #applause {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(248, 240, 225, 0.06);
