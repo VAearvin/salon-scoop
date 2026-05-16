@@ -1442,7 +1442,7 @@ ul, ol { list-style: none; }
   content: "";
   position: absolute;
   inset: 0;
-  background: url("assets/images/bg-applause.jpg") center 75% / cover no-repeat;
+  background: url("assets/images/bg-applause.jpg") center 55% / cover no-repeat;
   filter: brightness(0.58) saturate(0.72);
   z-index: 0;
 }
