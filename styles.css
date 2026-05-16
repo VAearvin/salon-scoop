@@ -427,7 +427,7 @@ ul, ol { list-style: none; }
 }
 .section__sub {
   margin-top: 14px;
-  color: var(--text-dim);
+  color: var(--text-soft);
   font-size: 0.87rem;
   letter-spacing: 0.3px;
 }
