@@ -1,0 +1,10 @@
+# Raw source images (processed versions live in assets/images/)
+brand-session-*.jpg
+*.ai
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
