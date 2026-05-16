@@ -553,9 +553,10 @@
 
   function initParallax() {
     if (prefersReduced) return;
-    var heroBg    = $("heroBg");
-    var applauseBg = document.querySelector(".applause__bg");
-    var ticking   = false;
+    var heroBg       = $("heroBg");
+    var applauseBg   = document.querySelector(".applause__bg");
+    var promotionsBg = document.querySelector(".promotions__bg");
+    var ticking      = false;
 
     function update() {
       var y  = window.scrollY;
@@ -566,14 +567,18 @@
         heroBg.style.transform = "scale(1.08) translateY(" + (y * 0.18) + "px)";
       }
 
-      /* Applause — parallax relative to its section midpoint */
-      if (applauseBg) {
-        var rect   = applauseBg.parentElement.getBoundingClientRect();
+      /* Section parallax helper */
+      function parallaxSection(el) {
+        if (!el) return;
+        var rect = el.parentElement.getBoundingClientRect();
         if (rect.bottom >= 0 && rect.top <= vh) {
           var offset = (rect.top + rect.height / 2 - vh / 2) * 0.25;
-          applauseBg.style.transform = "translateY(" + offset + "px)";
+          el.style.transform = "translateY(" + offset + "px)";
         }
       }
+
+      parallaxSection(applauseBg);
+      parallaxSection(promotionsBg);
 
       ticking = false;
     }

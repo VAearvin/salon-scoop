@@ -1401,13 +1401,13 @@ ul, ol { list-style: none; }
   overflow: hidden;
   border-color: transparent;
 }
-#promotions::before {
-  content: "";
+.promotions__bg {
   position: absolute;
-  inset: 0;
+  inset: -25% 0;
   background: url("assets/images/bg-promotions.jpg") center 55% / cover no-repeat;
   filter: brightness(0.62) saturate(0.75);
   z-index: 0;
+  will-change: transform;
 }
 #promotions::after {
   content: "";
@@ -1416,7 +1416,7 @@ ul, ol { list-style: none; }
   background: rgba(10, 9, 7, 0.32);
   z-index: 1;
 }
-#promotions > * { position: relative; z-index: 2; }
+#promotions > *:not(.promotions__bg) { position: relative; z-index: 2; }
 
 
 /* #applause — stretched full-width for the team photo */
