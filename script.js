@@ -448,47 +448,90 @@
      9. GOOGLE REVIEW CHAMPIONS
      ============================================================ */
   function renderChampions() {
-    var grid = $("championsGrid");
-    grid.innerHTML = "";
+    var grid = $(“championsGrid”);
+    grid.innerHTML = “”;
 
     if (!isArr(DATA.reviewChampions)) {
-      grid.appendChild(emptyState("Review champions will be celebrated here soon."));
+      grid.appendChild(emptyState(“Review champions will be celebrated here soon.”));
       return;
     }
 
     DATA.reviewChampions.forEach(function (champ) {
-      var card = el("article", "champion-card stagger");
+      var card = el(“article”, “champion-card stagger”);
 
-      var head = el("div", "champion-card__head");
-      var photo = el("div", "champion-card__photo");
-      photo.textContent = (champ.name || "?").charAt(0);
+      var head = el(“div”, “champion-card__head”);
+      var photo = el(“div”, “champion-card__photo”);
+      photo.textContent = (champ.name || “?”).charAt(0);
       if (champ.photo) {
         var img = new Image();
-        img.alt = champ.name || "";
-        img.onload = function () { photo.innerHTML = ""; photo.appendChild(img); };
+        img.alt = champ.name || “”;
+        img.onload = function () { photo.innerHTML = “”; photo.appendChild(img); };
         img.onerror = function () { /* keep initial */ };
         img.src = champ.photo;
       }
       head.appendChild(photo);
 
-      var info = el("div", "champion-card__info");
-      info.appendChild(el("p", "champion-card__name", esc(champ.name || "Team member")));
-      var stars = el("div", "champion-card__stars");
-      for (var i = 0; i < 5; i++) stars.innerHTML += svg("star");
+      var info = el(“div”, “champion-card__info”);
+      info.appendChild(el(“p”, “champion-card__name”, esc(champ.name || “Team member”)));
+      var stars = el(“div”, “champion-card__stars”);
+      for (var i = 0; i < 5; i++) stars.innerHTML += svg(“star”);
       info.appendChild(stars);
       head.appendChild(info);
 
       card.appendChild(head);
-      if (champ.review) {
-        var reviewWrap = el("div", "champion-card__review-wrap");
-        reviewWrap.appendChild(el("p", "champion-card__review", '“' + esc(champ.review) + '”'));
-        if (champ.reviewer) {
-          reviewWrap.appendChild(el("p", "champion-card__reviewer", '— ' + esc(champ.reviewer)));
-        }
-        card.appendChild(reviewWrap);
+
+      /* Support both single review (legacy) and reviews array */
+      var reviews = isArr(champ.reviews) && champ.reviews.length
+        ? champ.reviews
+        : (champ.review ? [{ reviewer: champ.reviewer, review: champ.review }] : []);
+
+      if (reviews.length) {
+        var reviewsWrap = el(“div”, “champion-card__reviews”);
+        reviews.forEach(function (r, idx) {
+          var wrap = el(“div”, “champion-card__review-wrap” + (idx > 0 ? “ champion-card__review-wrap--next” : “”));
+          wrap.appendChild(el(“p”, “champion-card__review”, ““” + esc(r.review) + “””));
+          if (r.reviewer) {
+            wrap.appendChild(el(“p”, “champion-card__reviewer”, “— “ + esc(r.reviewer)));
+          }
+          reviewsWrap.appendChild(wrap);
+        });
+        card.appendChild(reviewsWrap);
       }
+
       grid.appendChild(card);
     });
+  }
+
+  function renderPhorestStars() {
+    var body = $(“phorestBody”);
+    if (!body) return;
+    body.innerHTML = “”;
+
+    var ph = DATA.phorestStars || {};
+    var ensemble = isArr(ph.ensemble) ? ph.ensemble : [];
+    var changes  = isArr(ph.twentyTwoChanges) ? ph.twentyTwoChanges : [];
+
+    if (!ensemble.length && !changes.length) {
+      body.appendChild(emptyState(“Phorest 5-star recipients will be listed here.”));
+      return;
+    }
+
+    function buildCol(title, names) {
+      var col = el(“div”, “phorest-col”);
+      var heading = el(“h3”, “phorest-col__title”, title);
+      col.appendChild(heading);
+      var list = el(“ul”, “phorest-list”);
+      names.forEach(function (name) {
+        var item = el(“li”, “phorest-list__item”);
+        item.innerHTML = svg(“star”) + “<span>” + esc(name) + “</span>”;
+        list.appendChild(item);
+      });
+      col.appendChild(list);
+      return col;
+    }
+
+    if (ensemble.length) body.appendChild(buildCol(“Ensemble Salon”, ensemble));
+    if (changes.length)  body.appendChild(buildCol(“22 Changes Salon & Spa”, changes));
   }
 
   /* ============================================================
@@ -597,6 +640,7 @@
     renderEducation();
     renderApplause();
     renderChampions();
+    renderPhorestStars();
 
     initScroll();
     initParallax();

@@ -205,61 +205,103 @@ window.SCOOP_DATA = {
   ],
 
   /* ---- 9. Google Review Champions (prior month) ---- */
-  /* Each champion shows: photo, name, and the actual review text from the client. */
+  /*
+   * Each champion: photo, name, and a "reviews" array (one entry per client review).
+   * Add more { reviewer, review } objects to any champion as reviews come in.
+   * Example:
+   *   reviews: [
+   *     { reviewer: "Client A", review: "Great service!" },
+   *     { reviewer: "Client B", review: "Absolutely loved it." },
+   *   ]
+   */
   reviewChampions: [
     {
       name: "Lacey",
       photo: "assets/images/champion-lacey.jpg",
-      reviewer: "Kaylee",
-      review: "Lacey was great! It was also a plus that she had the same hair type as me (fine, thin) as she knew just what to recommend to me. I scheduled an appointment same day and just went to whoever was available since I hadn't been to this salon before and I definitely got lucky!!",
+      reviews: [
+        { reviewer: "Kaylee", review: "Lacey was great! It was also a plus that she had the same hair type as me (fine, thin) as she knew just what to recommend to me. I scheduled an appointment same day and just went to whoever was available since I hadn't been to this salon before and I definitely got lucky!!" },
+      ],
     },
     {
       name: "Sam",
       photo: "assets/images/champion-sam.jpg",
-      reviewer: "Melody Plaganis",
-      review: "Trying a new hair stylist can be so intimidating. Upon meeting Sam, I immediately felt comfortable to open up. Communicating my request was easy and I'm so happy with the finished result. She's super sweet and easy to relate to. I'm looking forward to more cuts with her in the future. Thanks SAM!!!!",
+      reviews: [
+        { reviewer: "Melody Plaganis", review: "Trying a new hair stylist can be so intimidating. Upon meeting Sam, I immediately felt comfortable to open up. Communicating my request was easy and I'm so happy with the finished result. She's super sweet and easy to relate to. I'm looking forward to more cuts with her in the future. Thanks SAM!!!!" },
+      ],
     },
     {
       name: "Taylor",
       photo: "assets/images/champion-taylor.jpg",
-      reviewer: "Lindsay M",
-      review: "Taylor was fantastic! I am looking forward to coming back in a couple weeks for coloring!!",
+      reviews: [
+        { reviewer: "Lindsay M", review: "Taylor was fantastic! I am looking forward to coming back in a couple weeks for coloring!!" },
+      ],
     },
     {
       name: "Sadie",
       photo: "assets/images/champion-sadie.jpg",
-      reviewer: "Courtney Johnson",
-      review: "Sadie, and the experience of going with a new haircut was exceptional. I showed a picture of what I was going for, and she nailed it. My hair looks and feels 10x better thanks to her. Thank you Sadie!",
+      reviews: [
+        { reviewer: "Courtney Johnson", review: "Sadie, and the experience of going with a new haircut was exceptional. I showed a picture of what I was going for, and she nailed it. My hair looks and feels 10x better thanks to her. Thank you Sadie!" },
+      ],
     },
     {
       name: "Juliana",
       photo: "assets/images/champion-juliana.jpg",
-      reviewer: "Jakob Bonillo",
-      review: "First time getting my hair dyed professionally decided to go in for a consolation and Juliana was very kind and knowledgeable learned a lot.",
+      reviews: [
+        { reviewer: "Jakob Bonillo", review: "First time getting my hair dyed professionally decided to go in for a consolation and Juliana was very kind and knowledgeable learned a lot." },
+      ],
     },
     {
       name: "Kelleigh",
       photo: "assets/images/champion-kelleigh.jpg",
-      reviewer: "Emma Christensen",
-      review: "I had my hair done by Kelleigh and she did an absolutely amazing job!! I have been getting nonstop compliments since and I couldn't be happier with the results. She was so easy to communicate with and the girl knows what she's talking about! Anyone who's looking for a stylist with exceptional skills and integrity, she's your girl. So happy to have found someone that I can trust and help me keep education and retain a healthy routine with my hair ♥",
+      reviews: [
+        { reviewer: "Emma Christensen", review: "I had my hair done by Kelleigh and she did an absolutely amazing job!! I have been getting nonstop compliments since and I couldn't be happier with the results. She was so easy to communicate with and the girl knows what she's talking about! Anyone who's looking for a stylist with exceptional skills and integrity, she's your girl. So happy to have found someone that I can trust and help me keep education and retain a healthy routine with my hair ♥" },
+      ],
     },
     {
       name: "Maddy",
       photo: "assets/images/champion-maddy.jpg",
-      reviewer: "Leyla Ramic",
-      review: "Maddy was excellent!! She took the time to actually talk about my hair and not just rush into getting the cut done, she was so welcoming and just an awesome stylist, I'll trust her w/ my hair any day. I'm so excited to come back for when I dye my hair this week. :3",
+      reviews: [
+        { reviewer: "Leyla Ramic", review: "Maddy was excellent!! She took the time to actually talk about my hair and not just rush into getting the cut done, she was so welcoming and just an awesome stylist, I'll trust her w/ my hair any day. I'm so excited to come back for when I dye my hair this week. :3" },
+      ],
     },
     {
       name: "Carissa",
       photo: "assets/images/champion-carissa.jpg",
-      reviewer: "Emma Ross",
-      review: "I originally booked an appointment for a two and a half hour time slot with Carissa. When I showed up I showed her my inspo and asked her opinion/advice. My inspo pick was bright blonde hair. Thankfully she had no one after me and was willing to spend almost two extra hours with me. She gave me exactly what I asked for and was so caring throughout the entire appointment. Thank you!",
+      reviews: [
+        { reviewer: "Emma Ross", review: "I originally booked an appointment for a two and a half hour time slot with Carissa. When I showed up I showed her my inspo and asked her opinion/advice. My inspo pick was bright blonde hair. Thankfully she had no one after me and was willing to spend almost two extra hours with me. She gave me exactly what I asked for and was so caring throughout the entire appointment. Thank you!" },
+      ],
     },
     {
       name: "Ghina",
       photo: "assets/images/champion-ghina.jpg",
-      reviewer: "Jenica Wilson",
-      review: "First-timer, over here! I had a facial done by Ghina, that was incredibly relaxing. Ghina was so kind and knowledgeable about how to remedy my concerns. I was so comfortable and relaxed that I almost fell asleep. When I looked in the mirror, I saw my glowing skin — I was so impressed! I booked my next appointment with her before leaving the salon.",
+      reviews: [
+        { reviewer: "Jenica Wilson", review: "First-timer, over here! I had a facial done by Ghina, that was incredibly relaxing. Ghina was so kind and knowledgeable about how to remedy my concerns. I was so comfortable and relaxed that I almost fell asleep. When I looked in the mirror, I saw my glowing skin — I was so impressed! I booked my next appointment with her before leaving the salon." },
+      ],
     },
   ],
+
+  /* ---- 10. Phorest 5-Star Review Recipients ---- */
+  /* List everyone who earned a 5-star Phorest review this month, by location. */
+  phorestStars: {
+    ensemble: [
+      "Addison Witt",
+      "Maddy Riordan",
+      "Lacey Wetmore",
+      "Sadie Sferrazza",
+      "Sam Dubenko",
+      "Taylor Brotherton",
+      "Kasandra Leal",
+      "Juliana Tarrats",
+      "Mandi McGillic",
+      "Jessie (Jessica) Meyers",
+    ],
+    twentyTwoChanges: [
+      "Whitney Coltrane",
+      "Miriam Moldovan",
+      "Nevaeh Spink",
+      "Maddy Riordan",
+      "Carissa DeLeon",
+      "Ghina Halawa Ghosn",
+    ],
+  },
 };

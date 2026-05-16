@@ -1256,12 +1256,25 @@ ul, ol { list-style: none; }
   stroke-width: 1.5;
   fill: var(--gold);
 }
+.champion-card__reviews {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .champion-card__review-wrap {
   padding: 16px 22px 20px;
-  padding-left: 22px;
   border-left: 2px solid var(--gold-deep);
-  margin: 16px 22px;
+  margin: 16px 22px 0;
   flex: 1;
+}
+.champion-card__review-wrap--next {
+  margin-top: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  margin-bottom: 0;
+}
+.champion-card__reviews .champion-card__review-wrap:last-child {
+  margin-bottom: 20px;
 }
 .champion-card__review {
   color: var(--text-soft);
@@ -1276,6 +1289,60 @@ ul, ol { list-style: none; }
   color: var(--gold);
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   PHOREST 5-STAR REVIEW RECIPIENTS
+   ============================================================ */
+.phorest {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+.phorest-col {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.phorest-col:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+.phorest-col__title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--gold-soft);
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.phorest-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.phorest-list__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+.phorest-list__item .icon {
+  width: 0.85em;
+  height: 0.85em;
+  flex-shrink: 0;
+  color: var(--gold);
+  stroke-width: 1.5;
+  fill: var(--gold);
+}
+.phorest-list__item span {
+  font-weight: 500;
+  color: var(--text);
 }
 
 /* ============================================================
