@@ -1441,7 +1441,7 @@ ul, ol { list-style: none; }
 .applause__bg {
   position: absolute;
   inset: -25% 0;
-  background: url("assets/images/bg-applause.jpg") center 65% / cover no-repeat;
+  background: url("assets/images/bg-applause.jpg") center 60% / cover no-repeat;
   filter: brightness(0.58) saturate(0.72);
   z-index: 0;
   will-change: transform;
