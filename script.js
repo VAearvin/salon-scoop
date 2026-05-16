@@ -552,7 +552,6 @@
   }
 
   function initParallax() {
-    if (prefersReduced) return;
     var heroBg       = $("heroBg");
     var applauseBg   = document.querySelector(".applause__bg");
     var promotionsBg = document.querySelector(".promotions__bg");
