@@ -1193,14 +1193,16 @@ ul, ol { list-style: none; }
    ============================================================ */
 .champions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
 }
 .champion-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.4s var(--ease), border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
 .champion-card:hover {
@@ -1210,31 +1212,39 @@ ul, ol { list-style: none; }
 }
 .champion-card__head {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--border);
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  gap: 0;
 }
 .champion-card__photo {
-  width: 52px; height: 52px;
-  border-radius: 50%;
-  overflow: hidden;
+  width: 100%;
+  height: 230px;
+  border-radius: 0;
   flex-shrink: 0;
   background: var(--surface-2);
-  border: 1px solid var(--border-strong);
-  display: grid; place-items: center;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 5rem;
   color: var(--gold-soft);
+  overflow: hidden;
 }
-.champion-card__photo img { width: 100%; height: 100%; object-fit: cover; }
+.champion-card__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.champion-card__info {
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid var(--border);
+}
 .champion-card__name {
   font-family: var(--serif);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 .champion-card__stars {
   display: inline-flex;
@@ -1247,18 +1257,21 @@ ul, ol { list-style: none; }
   fill: var(--gold);
 }
 .champion-card__review-wrap {
-  padding-left: 16px;
+  padding: 16px 22px 20px;
+  padding-left: 22px;
   border-left: 2px solid var(--gold-deep);
+  margin: 16px 22px;
+  flex: 1;
 }
 .champion-card__review {
   color: var(--text-soft);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-style: italic;
-  line-height: 1.67;
+  line-height: 1.72;
 }
 .champion-card__reviewer {
-  margin-top: 8px;
-  font-size: 0.8rem;
+  margin-top: 10px;
+  font-size: 0.78rem;
   font-style: normal;
   color: var(--gold);
   font-weight: 500;

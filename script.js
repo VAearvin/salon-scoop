@@ -471,7 +471,7 @@
       }
       head.appendChild(photo);
 
-      var info = el("div");
+      var info = el("div", "champion-card__info");
       info.appendChild(el("p", "champion-card__name", esc(champ.name || "Team member")));
       var stars = el("div", "champion-card__stars");
       for (var i = 0; i < 5; i++) stars.innerHTML += svg("star");
