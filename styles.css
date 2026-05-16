@@ -1395,11 +1395,23 @@ ul, ol { list-style: none; }
 }
 .section-photo > * { position: relative; z-index: 2; }
 
-/* #promotions — full-width alt section */
+/* #promotions — full-bleed section with parallax background */
 #promotions {
+  max-width: none;
   position: relative;
   overflow: hidden;
   border-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+#promotions > *:not(.promotions__bg) {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: relative;
+  z-index: 2;
 }
 .promotions__bg {
   position: absolute;
@@ -1413,10 +1425,9 @@ ul, ol { list-style: none; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(10, 9, 7, 0.32);
+  background: rgba(10, 9, 7, 0.45);
   z-index: 1;
 }
-#promotions > *:not(.promotions__bg) { position: relative; z-index: 2; }
 
 
 /* #applause — stretched full-width for the team photo */
