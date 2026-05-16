@@ -553,13 +553,36 @@
 
   function initParallax() {
     if (prefersReduced) return;
-    var bg = $("heroBg");
-    window.addEventListener("scroll", function () {
-      var y = window.scrollY;
-      if (y < window.innerHeight) {
-        bg.style.transform = "scale(1.08) translateY(" + y * 0.18 + "px)";
+    var heroBg    = $("heroBg");
+    var applauseBg = document.querySelector(".applause__bg");
+    var ticking   = false;
+
+    function update() {
+      var y  = window.scrollY;
+      var vh = window.innerHeight;
+
+      /* Hero — scrolls from top of page */
+      if (heroBg && y < vh) {
+        heroBg.style.transform = "scale(1.08) translateY(" + (y * 0.18) + "px)";
       }
+
+      /* Applause — parallax relative to its section midpoint */
+      if (applauseBg) {
+        var rect   = applauseBg.parentElement.getBoundingClientRect();
+        if (rect.bottom >= 0 && rect.top <= vh) {
+          var offset = (rect.top + rect.height / 2 - vh / 2) * 0.25;
+          applauseBg.style.transform = "translateY(" + offset + "px)";
+        }
+      }
+
+      ticking = false;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
     }, { passive: true });
+
+    update();
   }
 
   function initMobileNav() {

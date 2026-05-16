@@ -1429,7 +1429,7 @@ ul, ol { list-style: none; }
   padding-left: 0;
   padding-right: 0;
 }
-#applause > * {
+#applause > *:not(.applause__bg) {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -1438,13 +1438,13 @@ ul, ol { list-style: none; }
   position: relative;
   z-index: 2;
 }
-#applause::before {
-  content: "";
+.applause__bg {
   position: absolute;
-  inset: 0;
+  inset: -25% 0;
   background: url("assets/images/bg-applause.jpg") center 65% / cover no-repeat;
   filter: brightness(0.58) saturate(0.72);
   z-index: 0;
+  will-change: transform;
 }
 #applause::after {
   content: "";
