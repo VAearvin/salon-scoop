@@ -1398,6 +1398,7 @@ ul, ol { list-style: none; }
 /* #promotions — full-bleed section with parallax background */
 #promotions {
   max-width: none;
+  width: 100%;
   position: relative;
   overflow: hidden;
   border-color: transparent;
