@@ -197,10 +197,16 @@ window.SCOOP_DATA = {
   /* ---- 8. Applause Corner ---- */
   applause: [
     {
-      from: "Staff name",
-      to: "Staff name",
+      from: "Anonymous",
+      to: "Ghina",
       message:
-        "Placeholder shoutout — describe the great thing this team member did.",
+        "Big shoutout to G for always bringing the best vibes on Saturdays and making our team unstoppable! Your hard work and positivity don't go unnoticed 🙌",
+    },
+    {
+      from: "Ghina",
+      to: "Whitney",
+      message:
+        "Whitney is amazing! She is always supporting her co-workers and so caring. I appreciate her so much!!",
     },
   ],
 
