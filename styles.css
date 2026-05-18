@@ -1108,33 +1108,43 @@ ul, ol { list-style: none; }
   padding-bottom: 14px;
   border-bottom: 1px solid var(--border);
 }
-.points-list { display: flex; flex-direction: column; gap: 4px; }
+.points-list { display: flex; flex-direction: column; gap: 2px; }
 .points-list li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 9px 12px;
+  padding: 12px 14px;
   border-radius: var(--radius-sm);
+  border-bottom: 1px solid var(--border);
   transition: background 0.3s var(--ease), transform 0.3s var(--ease);
 }
+.points-list li:last-child { border-bottom: none; }
 .points-list li:hover {
-  background: rgba(200, 168, 105, 0.04);
+  background: rgba(200, 168, 105, 0.06);
   transform: translateX(4px);
 }
-.points-list__name { font-size: 0.93rem; color: var(--text); }
+.points-list__name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.2px;
+}
 .points-list__points {
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 1.35rem;
+  font-weight: 600;
   color: var(--gold-soft);
+  line-height: 1;
 }
 .points-list__points small {
   font-family: var(--sans);
-  font-size: 0.6rem;
-  letter-spacing: 1px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--text-dim);
-  margin-left: 3px;
+  color: var(--text-soft);
+  margin-left: 5px;
 }
 
 /* ============================================================
