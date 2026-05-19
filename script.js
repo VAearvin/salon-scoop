@@ -208,22 +208,39 @@
   }
 
   function renderPromotions() {
-    var promos = DATA.promotions || {};
-    var salon = $("promoSalon");
-    var spa = $("promoSpa");
-    salon.innerHTML = "";
-    spa.innerHTML = "";
+    var promos     = DATA.promotions || {};
+    var featured   = $("promoFeatured");
+    var special    = $("promoSpecial");
+    var specialGrp = $("promoSpecialGroup");
+    featured.innerHTML = "";
+    special.innerHTML  = "";
 
-    if (isArr(promos.salon)) {
-      promos.salon.forEach(function (p) { salon.appendChild(promoCard(p)); });
-    } else {
-      salon.appendChild(emptyState("Salon offers will be posted soon."));
+    /* Merge salon + spa into one list, tag each with its origin so we
+       can show a small "Hair Salon" / "Spa" label on the card. */
+    var all = []
+      .concat(isArr(promos.salon) ? promos.salon.map(function (p) {
+        return Object.assign({ _origin: "Hair Salon" }, p);
+      }) : [])
+      .concat(isArr(promos.spa) ? promos.spa.map(function (p) {
+        return Object.assign({ _origin: "Spa" }, p);
+      }) : []);
+
+    if (!all.length) {
+      featured.appendChild(emptyState("Promotions will be posted soon."));
+      if (specialGrp) specialGrp.hidden = true;
+      return;
     }
 
-    if (isArr(promos.spa)) {
-      promos.spa.forEach(function (p) { spa.appendChild(promoCard(p)); });
-    } else {
-      spa.appendChild(emptyState("Spa offers will be posted soon."));
+    var featuredList = all.filter(function (p) { return !p.special; });
+    var specialList  = all.filter(function (p) { return !!p.special; });
+
+    featuredList.forEach(function (p) { featured.appendChild(promoCard(p)); });
+
+    if (specialList.length) {
+      specialList.forEach(function (p) { special.appendChild(promoCard(p)); });
+      if (specialGrp) specialGrp.hidden = false;
+    } else if (specialGrp) {
+      specialGrp.hidden = true;
     }
   }
 

@@ -602,6 +602,40 @@ ul, ol { list-style: none; }
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+/* Featured: regular 2-column grid */
+.promo__track--featured {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+/* Special: single card, centered with a comfortable max-width */
+.promo__track--special {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.promo__group--special {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+.promo__group--special::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+}
+.promo__group-title--special {
+  justify-content: center;
+  text-align: center;
+  color: var(--gold-soft);
+  border-bottom: none;
+  padding-bottom: 0;
+  font-style: italic;
+}
+.promo__group-title--special::before { display: none; }
 
 /* Magazine-style promo card: image on top, body below */
 .promo-card {
