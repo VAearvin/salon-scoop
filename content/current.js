@@ -212,10 +212,18 @@ window.SCOOP_DATA = {
   /* ---- 7. Upcoming Education ---- */
   education: [
     {
-      title: "Redken Symposium",
-      date: "Saturday, June 13, 2026 — 9:00 AM",
+      title: "Redken Symposium 2026",
+      date: "June 13–15, 2026",
+      location: "Caesars Forum · Las Vegas, Nevada",
       description:
-        "Join us for the Redken Symposium! More details coming soon.",
+        "The 51st Redken Symposium is one of the biggest events in the hair industry — 3 days of world-class artistry, education, and connection in Las Vegas. This is a trip, not a local class. If you're interested in attending, please register through Eventbrite and connect with management for details on travel and accommodations.",
+      highlights: [
+        "1 Mainstage + 15+ powerful hair education classes",
+        "Opening Night Welcome Celebration & Redken Haircolor Awards",
+        "Redken Bash on June 14th — outside under the stars, Vegas style!",
+        "Business Forum track for salon leaders & managers",
+        "3 days of non-stop Education Gallery access",
+      ],
       eventbriteUrl: "https://www.eventbrite.com/e/1981805309028?aff=oddtdtcreator",
     },
   ],

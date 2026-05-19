@@ -551,13 +551,46 @@ ul, ol { list-style: none; }
   line-height: 1.2;
 }
 .card__body { color: var(--text-soft); font-size: 0.93rem; line-height: 1.7; }
-.card__meta {
+.card__meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   margin-top: 16px;
+}
+.card__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.74rem;
   letter-spacing: 0.8px;
   color: var(--gold-soft);
   text-transform: uppercase;
   font-weight: 500;
+}
+.card__meta .icon { width: 0.85em; height: 0.85em; flex-shrink: 0; }
+.card__meta--location { color: var(--text-soft); text-transform: none; letter-spacing: 0; font-size: 0.8rem; }
+.card__highlights {
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card__highlights li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+.card__highlights li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  font-size: 0.55rem;
+  top: 4px;
+  color: var(--teal);
 }
 .card__link {
   display: inline-flex;

@@ -39,6 +39,7 @@
     bulb:         '<path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a6 6 0 0 0-4 10.5c.7.8 1 1.7 1 2.5v1h6v-1c0-.8.3-1.7 1-2.5A6 6 0 0 0 12 2Z"/>',
     arrowRight:   '<path d="M5 12h14"/><path d="m13 5 7 7-7 7"/>',
     external:     '<path d="M15 3h6v6"/><path d="M21 3 10 14"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/>',
+    mapPin:       '<path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7Z"/><circle cx="12" cy="9" r="2.5"/>',
     scissors:     '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/>',
     percent:      '<line x1="19" y1="5" x2="5" y2="19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>',
   };
@@ -427,8 +428,28 @@
       var card = el("div", "card card--teal stagger");
       card.appendChild(el("div", "card__icon", svg("graduation-cap")));
       card.appendChild(el("h4", "card__title", esc(cls.title || "Class")));
-      if (cls.date) card.appendChild(el("p", "card__meta", esc(cls.date)));
+
+      var metaRow = el("div", "card__meta-row");
+      if (cls.date) {
+        var dateEl = el("span", "card__meta", svg("calendar") + esc(cls.date));
+        metaRow.appendChild(dateEl);
+      }
+      if (cls.location) {
+        var locEl = el("span", "card__meta card__meta--location", svg("mapPin") + esc(cls.location));
+        metaRow.appendChild(locEl);
+      }
+      if (metaRow.children.length) card.appendChild(metaRow);
+
       card.appendChild(el("p", "card__body", esc(cls.description || "")));
+
+      if (isArr(cls.highlights)) {
+        var ul = el("ul", "card__highlights");
+        cls.highlights.forEach(function (h) {
+          ul.appendChild(el("li", null, esc(h)));
+        });
+        card.appendChild(ul);
+      }
+
       if (cls.eventbriteUrl) {
         var link = el("a", "card__link",
           "Register on Eventbrite " + svg("external"));
