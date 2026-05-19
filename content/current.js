@@ -95,7 +95,7 @@ window.SCOOP_DATA = {
       {
         title: "50% OFF Classic 60-Min Facial — First-Time Facial Clients",
         badge: "50% OFF",
-        image: "assets/images/promo-spa-2.jpg",
+        image: "",
         details: [
           "For clients who have never had a facial at 22 Changes",
           "\"Since you haven't experienced the spa side of 22 Changes, we'd like to invite you to try our facial for 50% off.\"",

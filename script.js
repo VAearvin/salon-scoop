@@ -153,23 +153,33 @@
      ============================================================ */
   function promoCard(promo) {
     var card = el("article", "promo-card stagger");
+    /* image: "" means intentionally text-only (special promo) */
+    var hasImage   = typeof promo.image === "string" && promo.image.length > 0;
+    var skipMedia  = promo.image === "";
 
-    var media = el("div", "promo-card__media");
-    if (promo.badge) {
-      media.appendChild(el("span", "promo-card__badge", esc(promo.badge)));
-    }
-    if (promo.image) {
-      var img = new Image();
-      img.alt = promo.title || "";
-      img.onerror = function () {
-        media.innerHTML = "";
-        if (promo.badge) media.appendChild(el("span", "promo-card__badge", esc(promo.badge)));
+    var media = null;
+    if (!skipMedia) {
+      media = el("div", "promo-card__media");
+      if (promo.badge) {
+        media.appendChild(el("span", "promo-card__badge", esc(promo.badge)));
+      }
+      if (hasImage) {
+        var img = new Image();
+        img.alt = promo.title || "";
+        img.onerror = function () {
+          media.innerHTML = "";
+          if (promo.badge) media.appendChild(el("span", "promo-card__badge", esc(promo.badge)));
+          media.appendChild(el("span", "promo-card__media-placeholder", "Image coming soon"));
+        };
+        img.src = promo.image;
+        media.appendChild(img);
+      } else {
         media.appendChild(el("span", "promo-card__media-placeholder", "Image coming soon"));
-      };
-      img.src = promo.image;
-      media.appendChild(img);
-    } else {
-      media.appendChild(el("span", "promo-card__media-placeholder", "Image coming soon"));
+      }
+    } else if (promo.badge) {
+      /* No media area, but still show the badge at the top of the card */
+      card.classList.add("promo-card--no-media");
+      card.appendChild(el("span", "promo-card__badge promo-card__badge--inline", esc(promo.badge)));
     }
 
     var body = el("div", "promo-card__body");
@@ -192,7 +202,7 @@
       body.appendChild(el("span", "promo-card__valid", valid));
     }
 
-    card.appendChild(media);
+    if (media) card.appendChild(media);
     card.appendChild(body);
     return card;
   }

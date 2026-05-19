@@ -669,6 +669,17 @@ ul, ol { list-style: none; }
   border-radius: 4px;
   border: 1px solid rgba(200, 168, 105, 0.3);
 }
+/* Text-only promo card (image: "") — no media area, badge sits inline */
+.promo-card--no-media {
+  border-color: rgba(200, 168, 105, 0.28);
+}
+.promo-card__badge--inline {
+  position: static;
+  align-self: flex-start;
+  margin: 22px 26px 0;
+  font-size: 0.68rem;
+  padding: 6px 14px;
+}
 .promo-card__body {
   padding: 24px 26px 28px;
   display: flex;
