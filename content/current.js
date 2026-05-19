@@ -67,7 +67,6 @@ window.SCOOP_DATA = {
     salon: [
       {
         title: "BOGO L'Oréal — Color Care",
-        brand: "Color Care (LP Alpha Sleek)",
         badge: "BOGO",
         image: "assets/images/promo-salon-1.jpg",
         details: [
