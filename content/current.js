@@ -216,7 +216,7 @@ window.SCOOP_DATA = {
       date: "June 13–15, 2026",
       location: "Caesars Forum · Las Vegas, Nevada",
       description:
-        "The 51st Redken Symposium is one of the biggest events in the hair industry — 3 days of world-class artistry, education, and connection in Las Vegas. This is a trip, not a local class. If you're interested in attending, please register through Eventbrite and connect with management for details on travel and accommodations.",
+        "The 51st Redken Symposium is one of the biggest events in the hair industry — 3 days of world-class artistry, education, and connection in Las Vegas. This is a trip, not a local class. If you're interested, please speak with management first. Once you've been confirmed to attend, use the button below to register on Eventbrite.",
       highlights: [
         "1 Mainstage + 15+ powerful hair education classes",
         "Opening Night Welcome Celebration & Redken Haircolor Awards",
