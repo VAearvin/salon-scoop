@@ -212,10 +212,10 @@ window.SCOOP_DATA = {
   /* ---- 7. Upcoming Education ---- */
   education: [
     {
-      title: "Class or workshop title",
-      date: "May 20, 2026",
+      title: "Redken Symposium",
+      date: "Saturday, June 13, 2026 — 9:00 AM",
       description:
-        "Placeholder — Earvin will send class details and the Eventbrite link.",
+        "Join us for the Redken Symposium! More details coming soon.",
       eventbriteUrl: "https://www.eventbrite.com/e/1981805309028?aff=oddtdtcreator",
     },
   ],
