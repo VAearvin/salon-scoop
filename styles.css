@@ -1564,6 +1564,16 @@ ul, ol { list-style: none; }
   z-index: 0;
   will-change: transform;
 }
+/* On widescreen viewports the portrait image fits width exactly with cover,
+   so background-position-x has no effect. Override to force a wider image
+   and then shift the visible window left so the gap between ladies 2 and 3
+   lands at the section's center. */
+@media (min-aspect-ratio: 1/1) {
+  .applause__bg {
+    background-size: 140% auto;
+    background-position: 30% 60%;
+  }
+}
 #applause::after {
   content: "";
   position: absolute;
