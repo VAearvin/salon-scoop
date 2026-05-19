@@ -66,16 +66,16 @@ window.SCOOP_DATA = {
   promotions: {
     salon: [
       {
-        title: "BOGO L'Oréal — Color Care",
-        badge: "BOGO",
+        title: "BOGO L'Oréal Products — May + June Special",
+        badge: "BOGO 50% OFF",
         image: "assets/images/promo-salon-1.jpg",
         details: [
-          "Buy one Color Care product, get one free",
-          "Featuring L'Oréal Color Care (LP Alpha Sleek)",
-          "Pair shampoo + conditioner routines and offer at the chair",
+          "Buy 1, Get 1 Half Off on all L'Oréal products in the salon",
+          "Perfect for maintaining color, caring for extensions, or keeping that fresh-from-the-salon feel every day",
+          "Ask your stylist for personalized recommendations at your next visit",
         ],
         validFrom: "May 1",
-        validTo: "May 31",
+        validTo: "June 30",
       },
     ],
     spa: [
