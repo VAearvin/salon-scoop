@@ -469,11 +469,11 @@ ul, ol { list-style: none; }
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-soft);
   margin-bottom: 24px;
 }
 .updates__group-dot {
@@ -754,10 +754,10 @@ ul, ol { list-style: none; }
   display: block;
   margin-top: auto;
   padding-top: 16px;
-  font-size: 0.7rem;
-  letter-spacing: 0.5px;
+  font-size: 0.78rem;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-soft);
 }
 
 /* ============================================================
@@ -861,10 +861,10 @@ ul, ol { list-style: none; }
 }
 .referral__deadline {
   display: inline-block;
-  font-size: 0.72rem;
-  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-soft);
   margin-bottom: 24px;
 }
 .referral__steps {
@@ -1098,11 +1098,11 @@ ul, ol { list-style: none; }
   border-bottom: 1px solid var(--border-strong);
 }
 .prizes__table th {
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-soft);
   background: rgba(255, 255, 255, 0.01);
   padding: 14px 20px;
 }
@@ -1123,8 +1123,8 @@ ul, ol { list-style: none; }
 .prizes__note {
   padding: 14px 20px;
   text-align: center;
-  color: var(--text-dim);
-  font-size: 0.82rem;
+  color: var(--text-soft);
+  font-size: 0.9rem;
   border-top: 1px solid var(--border);
 }
 
@@ -1238,7 +1238,7 @@ ul, ol { list-style: none; }
   border-top: 1px solid var(--border);
   padding-top: 16px;
 }
-.applause-card__from { color: var(--text-dim); }
+.applause-card__from { color: var(--text-soft); }
 .applause-card__arrow { color: var(--gold); display: inline-flex; }
 .applause-card__arrow .icon { width: 0.9em; height: 0.9em; }
 .applause-card__to { font-weight: 600; color: var(--gold-soft); }
@@ -1426,8 +1426,8 @@ ul, ol { list-style: none; }
   font-weight: 500;
 }
 .footer__note {
-  color: var(--text-dim);
-  font-size: 0.82rem;
+  color: var(--text-soft);
+  font-size: 0.9rem;
   margin-top: 16px;
 }
 
