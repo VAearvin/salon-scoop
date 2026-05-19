@@ -562,17 +562,30 @@ ul, ol { list-style: none; }
 .card__link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 12px 22px;
   font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.8px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--gold-soft);
-  transition: gap 0.35s var(--ease), color 0.35s var(--ease);
+  color: var(--bg);
+  background: var(--gold-soft);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.25s var(--ease), gap 0.25s var(--ease), transform 0.2s var(--ease), box-shadow 0.25s var(--ease);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  text-decoration: none;
 }
-.card__link:hover { gap: 14px; color: var(--text); }
-.card__link .icon { width: 0.9em; height: 0.9em; }
+.card__link:hover {
+  gap: 16px;
+  background: var(--text);
+  color: var(--bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+}
+.card__link:active { transform: translateY(0); }
+.card__link .icon { width: 1em; height: 1em; }
 
 /* ============================================================
    PROMOTIONS

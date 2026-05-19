@@ -216,7 +216,7 @@ window.SCOOP_DATA = {
       date: "May 20, 2026",
       description:
         "Placeholder — Earvin will send class details and the Eventbrite link.",
-      eventbriteUrl: "",
+      eventbriteUrl: "https://www.eventbrite.com/e/1981805309028?aff=oddtdtcreator",
     },
   ],
 
