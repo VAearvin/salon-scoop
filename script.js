@@ -288,15 +288,10 @@
     $("referralTitle").textContent = contest.title || "Staff Referral Contest";
 
     if (!contest.active) {
-      $("referralSub").textContent = "";
-      var inactive = el("div", "referral__inactive stagger");
-      var iconWrap = el("div", "referral__inactive-icon", svg("trophy"));
-      inactive.appendChild(iconWrap);
-      inactive.appendChild(
-        el("p", null, esc(contest.description ||
-          "No referral contest running this month — check back soon for the next one!"))
-      );
-      body.appendChild(inactive);
+      var section = document.getElementById("referral");
+      if (section) section.hidden = true;
+      var navLink = document.querySelector('.nav__link[href="#referral"]');
+      if (navLink) navLink.hidden = true;
       return;
     }
 
