@@ -38,26 +38,41 @@ window.SCOOP_DATA = {
   updates: {
     managementProjects: [
       {
-        icon: "tools",
-        title: "Project title goes here",
-        body: "Placeholder — describe a management project currently in progress. Earvin will send the real updates.",
+        icon: "users",
+        title: "Associate Hiring at Ensemble — Kaden",
+        body: "We are thrilled to share that Mandy has found her next associate at Ensemble! Kaden has been selected and is set to officially start on August 1st. This is an exciting addition to the Ensemble team, and we cannot wait to see Kaden grow and thrive in the program. More details on the onboarding process will be shared as we get closer to the start date.",
       },
       {
-        icon: "clipboard",
-        title: "Another project in progress",
-        body: "Placeholder — what's being worked on, the goal, and the rough timeline.",
+        icon: "tools",
+        title: "Inventory Overhaul — Both Salons",
+        body: "A huge thank you to Tasha for leading a major inventory overhaul across both salon locations. She returned discontinued products, updated planograms, and corrected min/max levels to ensure our ordering system is accurate and running smoothly. This kind of behind-the-scenes work makes a massive difference in day-to-day operations, and we appreciate the time and care she put into getting it done. Color and retail inventory accuracy is being actively tightened up, and we will continue to monitor and maintain it going forward.",
       },
     ],
     companyUpdates: [
       {
-        icon: "megaphone",
-        title: "Company update title",
-        body: "Placeholder — a general company announcement for the team this month.",
+        icon: "rocket",
+        title: "Team Milestones — Celebrating Growth",
+        body: "We have some huge milestones to celebrate! Maddie and Sadie are coming up on their one-year anniversary behind the chair and will officially be transitioning out of the associate program — their growth has been incredible to watch and this next chapter is so well deserved. And in even more exciting news, Nevaeh has graduated to Level 1! This is a big deal and a reflection of all the hard work and dedication she has put in. Please take a moment to celebrate all three of them. Level 1 tracking numbers will be adjusted moving forward to reflect these transitions.",
       },
       {
         icon: "users",
-        title: "Welcome a new team member",
-        body: "Placeholder — new hire announcements, schedule changes, or other team news.",
+        title: "Welcome to the Team — Maddy Riordan",
+        body: "We are excited to welcome Maddy Riordan to 22 Changes! Maddy will be joining the team full time starting June 1st. Please make her feel at home and give her a warm welcome as she settles in. We are looking forward to seeing the great things she brings to the salon.",
+      },
+      {
+        icon: "calendar",
+        title: "Alyssa Is Back — New Schedule",
+        body: "Alyssa is officially back from vacation and has transitioned into a new working arrangement. She is now working virtually after hours and will be at the salon in person on Thursday evenings. This is a great setup that allows her to continue supporting both locations while balancing her schedule. If you need to reach her, keep Thursday evenings in mind for in-person check-ins, and she remains reachable virtually outside of salon hours.",
+      },
+      {
+        icon: "star",
+        title: "State Inspection Visit — We Are in Full Compliance",
+        body: "We recently had a visit from the state to review our consent forms and overall compliance. We are happy to report that everything checked out and we are fully in compliance — no issues whatsoever. There was also a question raised about license placement at stations, and it was confirmed that our current setup is completely correct for W-2 employees. This is a testament to the work everyone has put into keeping our standards high. Great job, team.",
+      },
+      {
+        icon: "clipboard",
+        title: "Important Reminder — Consultation Form Process",
+        body: "As we continue to improve our client intake process, we want to make sure everyone is aware of an important step when reviewing signed consultation forms. After a client signs their form, stylists must go back in and mark it \"Done,\" then select \"Profile Completed\" in Desktop. If this step is skipped, the system will continue to resend the form to that client at every future appointment — which creates a confusing experience for them. Please make sure this is part of your routine after every consultation. A report can be pulled at any time to see where this step is being completed and where it is being missed, so we can offer support where needed.",
       },
     ],
   },
