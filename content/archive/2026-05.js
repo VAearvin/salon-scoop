@@ -12,16 +12,15 @@
  * Notes:
  *   - Any section with an empty array shows a tasteful "coming soon" state.
  *   - referralContest.active = false hides that section's body.
- *   - applause = { active: false } hides the whole Applause Corner section.
  *   - "icon" fields take a short keyword (see ICON SET in script.js).
  *   - Image paths are relative, e.g. "assets/images/hero.jpg".
  */
 
 window.SCOOP_DATA = {
   /* ---- Masthead ---- */
-  month: "June",
+  month: "May",
   year: 2026,
-  edition: "JUNE 2026 EDITION",
+  edition: "MAY 2026 EDITION",
 
   /* ---- 1. Hero ---- */
   hero: {
@@ -94,11 +93,40 @@ window.SCOOP_DATA = {
         validTo: "June 30",
       },
     ],
-    spa: [],
+    spa: [
+      {
+        title: "LED Treatment — Buy 3, Get 1 Free",
+        badge: "BUY 3 GET 1 FREE",
+        image: "assets/images/promo-spa-1.jpg",
+        details: [
+          "Buy any three LED treatments, get the fourth free",
+          "Include education on how LED works and results after one treatment",
+          "Great for clients exploring brightening, calming, or anti-aging",
+        ],
+        validFrom: "May 1",
+        validTo: "May 31",
+      },
+      {
+        title: "50% OFF Classic 60-Min Facial — First-Time Facial Clients",
+        badge: "50% OFF",
+        image: "",
+        special: true,
+        details: [
+          "For clients who have never had a facial at 22 Changes",
+          "\"Since you haven't experienced the spa side of 22 Changes, we'd like to invite you to try our facial for 50% off.\"",
+          "Book in May to redeem — May only",
+        ],
+        validFrom: "May 1",
+        validTo: "May 31",
+      },
+    ],
   },
 
   /* ---- 4. Birthday Celebrants ---- */
-  birthdays: [],
+  birthdays: [
+    { name: "Darren",   date: "May 6",  photo: "assets/images/birthday-darren.jpg" },
+    { name: "Maddy R.", date: "May 9",  photo: "assets/images/birthday-maddy-r.jpg" },
+  ],
 
   /* ---- 5. Staff Referral Contest (toggle with active) ---- */
   referralContest: {
@@ -160,38 +188,38 @@ window.SCOOP_DATA = {
     /* Points per team member — split by salon (NOT a leaderboard). */
     pointsByLocation: {
       ensemble: [
-        { name: "Juliana Tarrats",   points: 100 },
-        { name: "Tasha Stager",      points:  93 },
-        { name: "Taylor Aeh",        points:  80 },
-        { name: "Sam Dubenko",       points:  77 },
-        { name: "Jessica Meyers",    points:  71 },
-        { name: "Erin Kramer",       points:  61 },
-        { name: "Addison Witt",      points:  60 },
-        { name: "Sadie Sferrazza",   points:  57 },
-        { name: "Lily McCarthy",     points:  55 },
-        { name: "Lacey Wetmore",     points:  50 },
-        { name: "Kylee Klotzbach",   points:  50 },
-        { name: "Kasandra Leal",     points:  31 },
-        { name: "Mandi Telligman",   points:  27 },
-        { name: "Madeline Gaston",   points:  23 },
-        { name: "Lea Blaskower",     points:   7 },
+        { name: "Juliana Tarrats",   points: 99 },
+        { name: "Tasha Stager",      points: 83 },
+        { name: "Maddy Riordan",     points: 78 },
+        { name: "Taylor Aeh",        points: 75 },
+        { name: "Sam Dubenko",       points: 72 },
+        { name: "Mandi Telligman",   points: 69 },
+        { name: "Jessica Meyers",    points: 63 },
+        { name: "Erin Kramer",       points: 61 },
+        { name: "Addison Witt",      points: 55 },
+        { name: "Lily McCarthy",     points: 50 },
+        { name: "Sadie Sferrazza",   points: 48 },
+        { name: "Lacey Wetmore",     points: 47 },
+        { name: "Kasandra Leal",     points: 23 },
+        { name: "Madeline Gaston",   points: 23 },
+        { name: "Lea Blaskower",     points:  7 },
       ],
       twentyTwoChanges: [
-        { name: "Kelleigh Coy-Strange", points: 103 },
-        { name: "Maddy Riordan",        points:  88 },
-        { name: "Ghina Ghosn",          points:  83 },
-        { name: "Kya Mendoza",          points:  81 },
-        { name: "Crystal Rohlfing",     points:  64 },
-        { name: "Tari Brumfiel",        points:  63 },
-        { name: "Whitney Coltrane",     points:  48 },
-        { name: "Regina Davidson",      points:  45 },
-        { name: "Dejah Williams",       points:  39 },
-        { name: "Alyssa Wales",         points:  38 },
-        { name: "Nevaeh Spink",         points:  33 },
-        { name: "Ceana Kopsho",         points:  33 },
-        { name: "Carissa DeLeon",       points:  26 },
-        { name: "Gracie England",       points:  11 },
-        { name: "Miriam Moldovan",      points:   4 },
+        { name: "Kelleigh Coy-Strange", points: 90 },
+        { name: "Kya Mendoza",          points: 75 },
+        { name: "Ghina Ghosn",          points: 69 },
+        { name: "Crystal Rohlfing",     points: 63 },
+        { name: "Tari Brumfiel",        points: 62 },
+        { name: "Whitney Coltrane",     points: 47 },
+        { name: "Regina Davidson",      points: 40 },
+        { name: "Alyssa Wales",         points: 33 },
+        { name: "Nevaeh Spink",         points: 29 },
+        { name: "Ceana Kopsho",         points: 27 },
+        { name: "Mariah Burnette",      points: 27 },
+        { name: "Dejah Williams",       points: 25 },
+        { name: "Carissa DeLeon",       points: 21 },
+        { name: "Gracie England",       points:  5 },
+        { name: "Miriam Moldovan",      points:  0 },
       ],
     },
   },
@@ -216,80 +244,93 @@ window.SCOOP_DATA = {
   ],
 
   /* ---- 8. Applause Corner ---- */
-  /* Set to { active: false } to hide the entire section for the month. */
-  applause: { active: false },
+  applause: [
+    {
+      from: "Anonymous",
+      to: "Ghina",
+      message:
+        "Big shoutout to G for always bringing the best vibes on Saturdays and making our team unstoppable! Your hard work and positivity don't go unnoticed 🙌",
+    },
+    {
+      from: "Ghina",
+      to: "Whitney",
+      message:
+        "Whitney is amazing! She is always supporting her co-workers and so caring. I appreciate her so much!!",
+    },
+  ],
 
   /* ---- 9. Google Review Champions (prior month) ---- */
   /*
    * Each champion: photo, name, and a "reviews" array (one entry per client review).
    * Add more { reviewer, review } objects to any champion as reviews come in.
+   * Example:
+   *   reviews: [
+   *     { reviewer: "Client A", review: "Great service!" },
+   *     { reviewer: "Client B", review: "Absolutely loved it." },
+   *   ]
    */
   reviewChampions: [
     {
-      name: "Carissa",
-      photo: "assets/images/champion-carissa.jpg",
+      name: "Lacey",
+      photo: "assets/images/champion-lacey.jpg",
       reviews: [
-        { reviewer: "Aspen Dorband", review: "Girls!! Carissa is where it is at!! Thank you so much. Best highlights I have had in a long time! And these layers…! I am obsessed. 🥹💛✨" },
+        { reviewer: "Kaylee", review: "Lacey was great! It was also a plus that she had the same hair type as me (fine, thin) as she knew just what to recommend to me. I scheduled an appointment same day and just went to whoever was available since I hadn't been to this salon before and I definitely got lucky!!" },
       ],
     },
     {
-      name: "Maddy",
-      photo: "assets/images/champion-maddy.jpg",
+      name: "Sam",
+      photo: "assets/images/champion-sam.jpg",
       reviews: [
-        { reviewer: "Debbie", review: "Maddy is delightful. I have a great new hair style and wonderful new stylist. Thank you, Maddy. You made my day." },
+        { reviewer: "Melody Plaganis", review: "Trying a new hair stylist can be so intimidating. Upon meeting Sam, I immediately felt comfortable to open up. Communicating my request was easy and I'm so happy with the finished result. She's super sweet and easy to relate to. I'm looking forward to more cuts with her in the future. Thanks SAM!!!!" },
       ],
     },
     {
-      name: "Dejah",
-      photo: "assets/images/champion-dejah.jpg",
+      name: "Taylor",
+      photo: "assets/images/champion-taylor.jpg",
       reviews: [
-        { reviewer: "Hopey Conner", review: "They are amazing. The lady Dejah is a sweetheart. Correct the name spelling, my bad, but all throughout was a great visit!" },
-        { reviewer: "Nicole Machic", review: "Dejah was wonderful! My skin has been a challenge for years and she was super helpful explaining products and what can help my skin. The facial was amazing and relaxing. I'll definitely be back for more facials." },
-      ],
-    },
-    {
-      name: "Miriam",
-      photo: "assets/images/champion-miriam.jpg",
-      reviews: [
-        { reviewer: "Yoel", review: "Miriam went above and beyond to make sure my hair was cut to my needs. It didn't take too long, which I liked. The salon is pretty nice on the inside." },
-      ],
-    },
-    {
-      name: "Kelleigh",
-      photo: "assets/images/champion-kelleigh.jpg",
-      reviews: [
-        { reviewer: "Amanda Odell", review: "Kelleigh is an amazing curly hair stylist. Both my girls and myself will not see anyone else. Every time we leave there, our curls look hydrated and bouncy." },
-      ],
-    },
-    {
-      name: "Jessie",
-      photo: "assets/images/champion-jessie.jpg",
-      reviews: [
-        { reviewer: "트와이스", review: "Jesse is amazing and she is the only one I have cut my hair now. When I first went to her I was having a lot of trust issues with my hair because I have fine hair and it grows very slowly. With Jesse's knowledge of hair she has given me an incredibly cute Bob that has enhanced my entire life.. I feel so much better about myself and I can't thank her enough for helping me with my confidence....... This is the hairstyle I always wanted.....I love it!!!!¡!" },
-        { reviewer: "Averie Turnbow", review: "Jessie is the best!! She knew exactly what I wanted and executed it perfectly! 10/10 recommend" },
-      ],
-    },
-    {
-      name: "Mandi",
-      photo: "assets/images/champion-mandi.jpg",
-      reviews: [
-        { reviewer: "Brittany McLean", review: "Mandi is hands down the best! Always does an amazing job and is so knowledgeable and friendly. I couldn't recommend her enough!" },
-        { reviewer: "Sabrina Willett", review: "My recent appointment with Mandi was hands down the best experience I've ever had at a hair salon. She took the time to ask thoughtful questions about my desired outcome and was incredibly knowledgeable throughout the entire appointment. She made clear, personalized recommendations based on my specific concerns, and I left feeling confident and so happy with the results. I think I've finally found my person!" },
+        { reviewer: "Lindsay M", review: "Taylor was fantastic! I am looking forward to coming back in a couple weeks for coloring!!" },
       ],
     },
     {
       name: "Sadie",
       photo: "assets/images/champion-sadie.jpg",
       reviews: [
-        { reviewer: "Winnie Randy", review: "Sadie was a wonderful hairstylist and she was super kind. This was my first professionally haircut since 2024 and she really knocked it out of the park!" },
+        { reviewer: "Courtney Johnson", review: "Sadie, and the experience of going with a new haircut was exceptional. I showed a picture of what I was going for, and she nailed it. My hair looks and feels 10x better thanks to her. Thank you Sadie!" },
       ],
     },
     {
-      name: "Addison",
-      photo: "assets/images/champion-addison.jpg",
+      name: "Juliana",
+      photo: "assets/images/champion-juliana.jpg",
       reviews: [
-        { reviewer: "Anna Stark", review: "I just had the best experience with Addie. She was so flexible with my schedule and was a treat to chat with for 4+ hours which makes a big difference! She did an amazing job and she knew exactly what products my hair type needed. In love with my new hair!" },
-        { reviewer: "Kimberly Cameron", review: "Addi was amazing and I love my haircut and style! Will definitely be back and I highly recommend Addi!" },
+        { reviewer: "Jakob Bonillo", review: "First time getting my hair dyed professionally decided to go in for a consolation and Juliana was very kind and knowledgeable learned a lot." },
+      ],
+    },
+    {
+      name: "Kelleigh",
+      photo: "assets/images/champion-kelleigh.jpg",
+      reviews: [
+        { reviewer: "Emma Christensen", review: "I had my hair done by Kelleigh and she did an absolutely amazing job!! I have been getting nonstop compliments since and I couldn't be happier with the results. She was so easy to communicate with and the girl knows what she's talking about! Anyone who's looking for a stylist with exceptional skills and integrity, she's your girl. So happy to have found someone that I can trust and help me keep education and retain a healthy routine with my hair ♥" },
+      ],
+    },
+    {
+      name: "Maddy",
+      photo: "assets/images/champion-maddy.jpg",
+      reviews: [
+        { reviewer: "Leyla Ramic", review: "Maddy was excellent!! She took the time to actually talk about my hair and not just rush into getting the cut done, she was so welcoming and just an awesome stylist, I'll trust her w/ my hair any day. I'm so excited to come back for when I dye my hair this week. :3" },
+      ],
+    },
+    {
+      name: "Carissa",
+      photo: "assets/images/champion-carissa.jpg",
+      reviews: [
+        { reviewer: "Emma Ross", review: "I originally booked an appointment for a two and a half hour time slot with Carissa. When I showed up I showed her my inspo and asked her opinion/advice. My inspo pick was bright blonde hair. Thankfully she had no one after me and was willing to spend almost two extra hours with me. She gave me exactly what I asked for and was so caring throughout the entire appointment. Thank you!" },
+      ],
+    },
+    {
+      name: "Ghina",
+      photo: "assets/images/champion-ghina.jpg",
+      reviews: [
+        { reviewer: "Jenica Wilson", review: "First-timer, over here! I had a facial done by Ghina, that was incredibly relaxing. Ghina was so kind and knowledgeable about how to remedy my concerns. I was so comfortable and relaxed that I almost fell asleep. When I looked in the mirror, I saw my glowing skin — I was so impressed! I booked my next appointment with her before leaving the salon." },
       ],
     },
   ],
@@ -298,25 +339,24 @@ window.SCOOP_DATA = {
   /* List everyone who earned a 5-star Phorest review this month, by location. */
   phorestStars: {
     ensemble: [
-      "Jessie (Jessica) Meyers",
       "Addison Witt",
-      "Juliana Tarrats",
-      "Mandi McGillic",
+      "Maddy Riordan",
       "Lacey Wetmore",
       "Sadie Sferrazza",
-      "Kasandra Leal",
       "Sam Dubenko",
+      "Taylor Brotherton",
+      "Kasandra Leal",
+      "Juliana Tarrats",
+      "Mandi McGillic",
+      "Jessie (Jessica) Meyers",
     ],
     twentyTwoChanges: [
+      "Whitney Coltrane",
       "Miriam Moldovan",
-      "Maddy Riordan",
       "Nevaeh Spink",
-      "Tari Brumfiel",
-      "Kelleigh Coy-Strange",
-      "Crystal Rohlfing",
-      "Kya Mendoza",
+      "Maddy Riordan",
       "Carissa DeLeon",
-      "Dejah Williams",
+      "Ghina Halawa Ghosn",
     ],
   },
 };

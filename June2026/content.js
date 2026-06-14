@@ -14,7 +14,7 @@
  *   - referralContest.active = false hides that section's body.
  *   - applause = { active: false } hides the whole Applause Corner section.
  *   - "icon" fields take a short keyword (see ICON SET in script.js).
- *   - Image paths are relative, e.g. "assets/images/hero.jpg".
+ *   - Image paths are relative, e.g. "/assets/images/hero.jpg".
  */
 
 window.SCOOP_DATA = {
@@ -28,10 +28,10 @@ window.SCOOP_DATA = {
     title: "Salon Scoop",
     subtitle:
       "Your monthly insider for Ensemble Salon & 22 Changes Salon and Spa.",
-    backgroundImage: "assets/images/bg-hero.jpg",
+    backgroundImage: "/assets/images/bg-hero.jpg",
     logos: [
-      { name: "Ensemble Salon",        image: "assets/images/logo-ensemble.png" },
-      { name: "22 Changes Salon & Spa", image: "assets/images/logo-22changes.png" },
+      { name: "Ensemble Salon",        image: "/assets/images/logo-ensemble.png" },
+      { name: "22 Changes Salon & Spa", image: "/assets/images/logo-22changes.png" },
     ],
   },
 
@@ -84,7 +84,7 @@ window.SCOOP_DATA = {
       {
         title: "BOGO L'Oréal Products — May + June Special",
         badge: "BOGO 50% OFF",
-        image: "assets/images/promo-salon-1.jpg",
+        image: "/assets/images/promo-salon-1.jpg",
         details: [
           "Buy 1, Get 1 Half Off on all L'Oréal products in the salon",
           "Perfect for maintaining color, caring for extensions, or keeping that fresh-from-the-salon feel every day",
@@ -227,21 +227,21 @@ window.SCOOP_DATA = {
   reviewChampions: [
     {
       name: "Carissa",
-      photo: "assets/images/champion-carissa.jpg",
+      photo: "/assets/images/champion-carissa.jpg",
       reviews: [
         { reviewer: "Aspen Dorband", review: "Girls!! Carissa is where it is at!! Thank you so much. Best highlights I have had in a long time! And these layers…! I am obsessed. 🥹💛✨" },
       ],
     },
     {
       name: "Maddy",
-      photo: "assets/images/champion-maddy.jpg",
+      photo: "/assets/images/champion-maddy.jpg",
       reviews: [
         { reviewer: "Debbie", review: "Maddy is delightful. I have a great new hair style and wonderful new stylist. Thank you, Maddy. You made my day." },
       ],
     },
     {
       name: "Dejah",
-      photo: "assets/images/champion-dejah.jpg",
+      photo: "/assets/images/champion-dejah.jpg",
       reviews: [
         { reviewer: "Hopey Conner", review: "They are amazing. The lady Dejah is a sweetheart. Correct the name spelling, my bad, but all throughout was a great visit!" },
         { reviewer: "Nicole Machic", review: "Dejah was wonderful! My skin has been a challenge for years and she was super helpful explaining products and what can help my skin. The facial was amazing and relaxing. I'll definitely be back for more facials." },
@@ -249,21 +249,21 @@ window.SCOOP_DATA = {
     },
     {
       name: "Miriam",
-      photo: "assets/images/champion-miriam.jpg",
+      photo: "/assets/images/champion-miriam.jpg",
       reviews: [
         { reviewer: "Yoel", review: "Miriam went above and beyond to make sure my hair was cut to my needs. It didn't take too long, which I liked. The salon is pretty nice on the inside." },
       ],
     },
     {
       name: "Kelleigh",
-      photo: "assets/images/champion-kelleigh.jpg",
+      photo: "/assets/images/champion-kelleigh.jpg",
       reviews: [
         { reviewer: "Amanda Odell", review: "Kelleigh is an amazing curly hair stylist. Both my girls and myself will not see anyone else. Every time we leave there, our curls look hydrated and bouncy." },
       ],
     },
     {
       name: "Jessie",
-      photo: "assets/images/champion-jessie.jpg",
+      photo: "/assets/images/champion-jessie.jpg",
       reviews: [
         { reviewer: "트와이스", review: "Jesse is amazing and she is the only one I have cut my hair now. When I first went to her I was having a lot of trust issues with my hair because I have fine hair and it grows very slowly. With Jesse's knowledge of hair she has given me an incredibly cute Bob that has enhanced my entire life.. I feel so much better about myself and I can't thank her enough for helping me with my confidence....... This is the hairstyle I always wanted.....I love it!!!!¡!" },
         { reviewer: "Averie Turnbow", review: "Jessie is the best!! She knew exactly what I wanted and executed it perfectly! 10/10 recommend" },
@@ -271,7 +271,7 @@ window.SCOOP_DATA = {
     },
     {
       name: "Mandi",
-      photo: "assets/images/champion-mandi.jpg",
+      photo: "/assets/images/champion-mandi.jpg",
       reviews: [
         { reviewer: "Brittany McLean", review: "Mandi is hands down the best! Always does an amazing job and is so knowledgeable and friendly. I couldn't recommend her enough!" },
         { reviewer: "Sabrina Willett", review: "My recent appointment with Mandi was hands down the best experience I've ever had at a hair salon. She took the time to ask thoughtful questions about my desired outcome and was incredibly knowledgeable throughout the entire appointment. She made clear, personalized recommendations based on my specific concerns, and I left feeling confident and so happy with the results. I think I've finally found my person!" },
@@ -279,14 +279,14 @@ window.SCOOP_DATA = {
     },
     {
       name: "Sadie",
-      photo: "assets/images/champion-sadie.jpg",
+      photo: "/assets/images/champion-sadie.jpg",
       reviews: [
         { reviewer: "Winnie Randy", review: "Sadie was a wonderful hairstylist and she was super kind. This was my first professionally haircut since 2024 and she really knocked it out of the park!" },
       ],
     },
     {
       name: "Addison",
-      photo: "assets/images/champion-addison.jpg",
+      photo: "/assets/images/champion-addison.jpg",
       reviews: [
         { reviewer: "Anna Stark", review: "I just had the best experience with Addie. She was so flexible with my schedule and was a treat to chat with for 4+ hours which makes a big difference! She did an amazing job and she knew exactly what products my hair type needed. In love with my new hair!" },
         { reviewer: "Kimberly Cameron", review: "Addi was amazing and I love my haircut and style! Will definitely be back and I highly recommend Addi!" },

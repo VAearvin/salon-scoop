@@ -469,12 +469,24 @@
     var grid = $("applauseGrid");
     grid.innerHTML = "";
 
-    if (!isArr(DATA.applause)) {
+    var data = DATA.applause;
+
+    // { active: false } hides the whole section + its nav link
+    if (data && !isArr(data) && data.active === false) {
+      var section = document.getElementById("applause");
+      if (section) section.hidden = true;
+      var navLink = document.querySelector('.nav__link[href="#applause"]');
+      if (navLink) navLink.hidden = true;
+      return;
+    }
+
+    var items = isArr(data) ? data : (data && isArr(data.items)) ? data.items : [];
+    if (items.length === 0) {
       grid.appendChild(emptyState("No shoutouts submitted yet this month."));
       return;
     }
 
-    DATA.applause.forEach(function (item) {
+    items.forEach(function (item) {
       var card = el("article", "applause-card stagger");
       card.appendChild(el("div", "applause-card__quote", svg("quote")));
       card.appendChild(el("p", "applause-card__message", esc(item.message || "")));
