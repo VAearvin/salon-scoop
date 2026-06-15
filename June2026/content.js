@@ -94,7 +94,20 @@ window.SCOOP_DATA = {
         validTo: "June 30",
       },
     ],
-    spa: [],
+    spa: [
+      {
+        title: "June Glow Upgrade — Hydro Jelly Mask",
+        badge: "$30 (was $40)",
+        image: "/assets/images/promo-spa-1.jpg",
+        details: [
+          "Add the Hydro Jelly Mask to any facial this June",
+          "Was $40, now only $30 — perfect for a summer glow",
+          "Ask your esthetician to add it to your next appointment",
+        ],
+        validFrom: "June 1",
+        validTo: "June 30",
+      },
+    ],
   },
 
   /* ---- 4. Birthday Celebrants ---- */
