@@ -419,12 +419,24 @@
     var grid = $("educationGrid");
     grid.innerHTML = "";
 
-    if (!isArr(DATA.education)) {
+    var data = DATA.education;
+
+    // { active: false } hides the whole section + its nav link
+    if (data && !isArr(data) && data.active === false) {
+      var section = document.getElementById("education");
+      if (section) section.hidden = true;
+      var navLink = document.querySelector('.nav__link[href="#education"]');
+      if (navLink) navLink.hidden = true;
+      return;
+    }
+
+    var items = isArr(data) ? data : (data && isArr(data.items)) ? data.items : [];
+    if (items.length === 0) {
       grid.appendChild(emptyState("No classes scheduled yet — check back soon."));
       return;
     }
 
-    DATA.education.forEach(function (cls) {
+    items.forEach(function (cls) {
       var card = el("div", "card card--teal stagger");
       card.appendChild(el("div", "card__icon", svg("graduation-cap")));
       card.appendChild(el("h4", "card__title", esc(cls.title || "Class")));
@@ -458,6 +470,52 @@
         link.rel = "noopener noreferrer";
         card.appendChild(link);
       }
+      grid.appendChild(card);
+    });
+  }
+
+  /* ============================================================
+     1B. STAFF MEETING REMINDERS
+     ============================================================ */
+  function renderStaffMeetings() {
+    var grid = $("staffMeetingsGrid");
+    if (!grid) return;
+    grid.innerHTML = "";
+
+    var data = DATA.staffMeetings;
+
+    if (data && !isArr(data) && data.active === false) {
+      var section = document.getElementById("staffMeetings");
+      if (section) section.hidden = true;
+      var navLink = document.querySelector('.nav__link[href="#staffMeetings"]');
+      if (navLink) navLink.hidden = true;
+      return;
+    }
+
+    if (data && data.title) {
+      var titleEl = $("staffMeetingsTitle");
+      if (titleEl) titleEl.textContent = data.title;
+    }
+    if (data && data.subtitle) {
+      var subEl = $("staffMeetingsSub");
+      if (subEl) subEl.textContent = data.subtitle;
+    }
+
+    var items = isArr(data) ? data : (data && isArr(data.meetings)) ? data.meetings : [];
+    if (items.length === 0) {
+      grid.appendChild(emptyState("No staff meetings scheduled yet — check back soon."));
+      return;
+    }
+
+    items.forEach(function (m) {
+      var card = el("div", "card card--teal stagger");
+      card.appendChild(el("div", "card__icon", svg("users")));
+      card.appendChild(el("h4", "card__title", esc(m.location || "Staff Meeting")));
+      var metaRow = el("div", "card__meta-row");
+      if (m.date) metaRow.appendChild(el("span", "card__meta", svg("calendar") + esc(m.date)));
+      if (m.time) metaRow.appendChild(el("span", "card__meta", svg("clock") + esc(m.time)));
+      if (metaRow.children.length) card.appendChild(metaRow);
+      if (m.note) card.appendChild(el("p", "card__body", esc(m.note)));
       grid.appendChild(card);
     });
   }
@@ -715,6 +773,7 @@
     }
     renderHero();
     renderUpdates();
+    renderStaffMeetings();
     renderPromotions();
     renderBirthdays();
     renderReferral();

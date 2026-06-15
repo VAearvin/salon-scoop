@@ -209,24 +209,18 @@ window.SCOOP_DATA = {
     },
   },
 
+  /* ---- 1B. Staff Meeting Reminders ---- */
+  staffMeetings: {
+    title: "Reminder — Staff Meeting Dates & Times",
+    subtitle: "Mark your calendars and plan to attend.",
+    meetings: [
+      { location: "Staff Meeting (Ensemble Salon)", date: "July 1, 2026", time: "2:00 PM – 3:30 PM" },
+      { location: "Staff Meeting (22 Changes)",     date: "July 2, 2026", time: "2:30 PM – 4:00 PM" },
+    ],
+  },
+
   /* ---- 7. Upcoming Education ---- */
-  education: [
-    {
-      title: "Redken Symposium 2026",
-      date: "June 13–15, 2026",
-      location: "Caesars Forum · Las Vegas, Nevada",
-      description:
-        "The 51st Redken Symposium is one of the biggest events in the hair industry — 3 days of world-class artistry, education, and connection in Las Vegas. This is a trip, not a local class. If you're interested, please speak with management first. Once you've been confirmed to attend, use the button below to register on Eventbrite.",
-      highlights: [
-        "1 Mainstage + 15+ powerful hair education classes",
-        "Opening Night Welcome Celebration & Redken Haircolor Awards",
-        "Redken Bash on June 14th — outside under the stars, Vegas style!",
-        "Business Forum track for salon leaders & managers",
-        "3 days of non-stop Education Gallery access",
-      ],
-      eventbriteUrl: "https://www.eventbrite.com/e/1981805309028?aff=oddtdtcreator",
-    },
-  ],
+  education: { active: false },
 
   /* ---- 8. Applause Corner ---- */
   /* Set to { active: false } to hide the entire section for the month. */
