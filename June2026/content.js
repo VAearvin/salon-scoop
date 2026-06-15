@@ -98,7 +98,7 @@ window.SCOOP_DATA = {
       {
         title: "June Glow Upgrade — Hydro Jelly Mask",
         badge: "$30 (was $40)",
-        image: "/assets/images/promo-spa-1.jpg",
+        image: "/assets/images/promo-spa-1.jpg?v=2",
         details: [
           "Add the Hydro Jelly Mask to any facial this June",
           "Was $40, now only $30 — perfect for a summer glow",
