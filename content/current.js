@@ -250,7 +250,7 @@ window.SCOOP_DATA = {
     },
     {
       name: "Dejah",
-      photo: "assets/images/champion-dejah.jpg",
+      photo: "assets/images/champion-dejah.jpg?v=2",
       reviews: [
         { reviewer: "Hopey Conner", review: "They are amazing. The lady Dejah is a sweetheart. Correct the name spelling, my bad, but all throughout was a great visit!" },
         { reviewer: "Nicole Machic", review: "Dejah was wonderful! My skin has been a challenge for years and she was super helpful explaining products and what can help my skin. The facial was amazing and relaxing. I'll definitely be back for more facials." },
@@ -258,7 +258,7 @@ window.SCOOP_DATA = {
     },
     {
       name: "Miriam",
-      photo: "assets/images/champion-miriam.jpg",
+      photo: "assets/images/champion-miriam.jpg?v=2",
       reviews: [
         { reviewer: "Yoel", review: "Miriam went above and beyond to make sure my hair was cut to my needs. It didn't take too long, which I liked. The salon is pretty nice on the inside." },
       ],
@@ -272,7 +272,7 @@ window.SCOOP_DATA = {
     },
     {
       name: "Jessie",
-      photo: "assets/images/champion-jessie.jpg",
+      photo: "assets/images/champion-jessie.jpg?v=2",
       reviews: [
         { reviewer: "트와이스", review: "Jesse is amazing and she is the only one I have cut my hair now. When I first went to her I was having a lot of trust issues with my hair because I have fine hair and it grows very slowly. With Jesse's knowledge of hair she has given me an incredibly cute Bob that has enhanced my entire life.. I feel so much better about myself and I can't thank her enough for helping me with my confidence....... This is the hairstyle I always wanted.....I love it!!!!¡!" },
         { reviewer: "Averie Turnbow", review: "Jessie is the best!! She knew exactly what I wanted and executed it perfectly! 10/10 recommend" },
@@ -280,7 +280,7 @@ window.SCOOP_DATA = {
     },
     {
       name: "Mandi",
-      photo: "assets/images/champion-mandi.jpg",
+      photo: "assets/images/champion-mandi.jpg?v=2",
       reviews: [
         { reviewer: "Brittany McLean", review: "Mandi is hands down the best! Always does an amazing job and is so knowledgeable and friendly. I couldn't recommend her enough!" },
         { reviewer: "Sabrina Willett", review: "My recent appointment with Mandi was hands down the best experience I've ever had at a hair salon. She took the time to ask thoughtful questions about my desired outcome and was incredibly knowledgeable throughout the entire appointment. She made clear, personalized recommendations based on my specific concerns, and I left feeling confident and so happy with the results. I think I've finally found my person!" },
@@ -295,7 +295,7 @@ window.SCOOP_DATA = {
     },
     {
       name: "Addison",
-      photo: "assets/images/champion-addison.jpg",
+      photo: "assets/images/champion-addison.jpg?v=2",
       reviews: [
         { reviewer: "Anna Stark", review: "I just had the best experience with Addie. She was so flexible with my schedule and was a treat to chat with for 4+ hours which makes a big difference! She did an amazing job and she knew exactly what products my hair type needed. In love with my new hair!" },
         { reviewer: "Kimberly Cameron", review: "Addi was amazing and I love my haircut and style! Will definitely be back and I highly recommend Addi!" },
