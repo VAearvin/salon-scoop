@@ -551,6 +551,17 @@ ul, ol { list-style: none; }
   line-height: 1.2;
 }
 .card__body { color: var(--text-soft); font-size: 0.93rem; line-height: 1.7; }
+.card__list {
+  margin: 10px 0 0;
+  padding-left: 1.1rem;
+  color: var(--text-soft);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+.card__list-item { margin-bottom: 6px; }
+.card__list-lead { color: var(--text); font-weight: 600; }
+.card__closer { margin-top: 12px; }
+.card__list-item::marker { color: var(--accent-teal, currentColor); }
 .card__meta-row {
   display: flex;
   flex-direction: column;

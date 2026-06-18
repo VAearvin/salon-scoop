@@ -121,7 +121,27 @@
     var card = el("div", "card card--" + variant + " stagger");
     card.appendChild(el("div", "card__icon", svg(item.icon || "sparkle")));
     card.appendChild(el("h4", "card__title", esc(item.title || "Untitled")));
-    card.appendChild(el("p", "card__body", esc(item.body || "")));
+    if (item.body) card.appendChild(el("p", "card__body", esc(item.body)));
+    if (isArr(item.bullets) && item.bullets.length) {
+      var ul = document.createElement("ul");
+      ul.className = "card__list";
+      item.bullets.forEach(function (b) {
+        var li = document.createElement("li");
+        li.className = "card__list-item";
+        var words = String(b).split(/\s+/);
+        var leadCount = Math.min(3, words.length);
+        var strong = document.createElement("strong");
+        strong.className = "card__list-lead";
+        strong.textContent = words.slice(0, leadCount).join(" ");
+        li.appendChild(strong);
+        if (words.length > leadCount) {
+          li.appendChild(document.createTextNode(" " + words.slice(leadCount).join(" ")));
+        }
+        ul.appendChild(li);
+      });
+      card.appendChild(ul);
+    }
+    if (item.closer) card.appendChild(el("p", "card__body card__closer", esc(item.closer)));
     return card;
   }
 
