@@ -19,9 +19,16 @@
  */
 window.SCOOP_ISSUES = [
   {
+    label: "July 2026",
+    url: "/July2026",
+    current: true,
+    cover: "/assets/images/bg-hero.jpg",
+    blurb:
+      "Record spa sales, welcome Kaden, the station-map refresh and new chores system, July promotions, birthday celebrants, culture points, and this month's review champions.",
+  },
+  {
     label: "June 2026",
     url: "/June2026",
-    current: true,
     cover: "/assets/images/bg-hero.jpg",
     blurb:
       "Symposium recap, welcome Nema, the work behind the scenes, the Hydro Jelly spa promo, and June's review champions.",

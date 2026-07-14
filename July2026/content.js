@@ -14,7 +14,7 @@
  *   - referralContest.active = false hides that section's body.
  *   - applause = { active: false } hides the whole Applause Corner section.
  *   - "icon" fields take a short keyword (see ICON SET in script.js).
- *   - Image paths are relative, e.g. "assets/images/hero.jpg".
+ *   - Image paths are relative, e.g. "/assets/images/hero.jpg".
  */
 
 window.SCOOP_DATA = {
@@ -28,10 +28,10 @@ window.SCOOP_DATA = {
     title: "Salon Scoop",
     subtitle:
       "Your monthly insider for Ensemble Salon & 22 Changes Salon and Spa.",
-    backgroundImage: "assets/images/bg-hero.jpg",
+    backgroundImage: "/assets/images/bg-hero.jpg",
     logos: [
-      { name: "Ensemble Salon",        image: "assets/images/logo-ensemble.png" },
-      { name: "22 Changes Salon & Spa", image: "assets/images/logo-22changes.png" },
+      { name: "Ensemble Salon",        image: "/assets/images/logo-ensemble.png" },
+      { name: "22 Changes Salon & Spa", image: "/assets/images/logo-22changes.png" },
     ],
   },
 
@@ -107,9 +107,9 @@ window.SCOOP_DATA = {
 
   /* ---- 4. Birthday Celebrants ---- */
   birthdays: [
-    { name: "Nevaeh",     date: "July 11", photo: "assets/images/birthday-nevaeh.jpg" },
+    { name: "Nevaeh",     date: "July 11", photo: "/assets/images/birthday-nevaeh.jpg" },
     { name: "Lorie Wall", date: "July 11" },
-    { name: "Tari",       date: "July 25", photo: "assets/images/birthday-tari.jpg" },
+    { name: "Tari",       date: "July 25", photo: "/assets/images/birthday-tari.jpg" },
     { name: "Amy Lam",    date: "July 29" },
   ],
 
@@ -269,7 +269,7 @@ window.SCOOP_DATA = {
   reviewChampions: [
     {
       name: "Addison",
-      photo: "assets/images/champion-addison.jpg?v=3",
+      photo: "/assets/images/champion-addison.jpg?v=3",
       reviews: [
         { reviewer: "Lindsay Crawford", review: "Addi is the best! She always achieves the look I'm going for and is so personable!! I came in wanting a totally different hair cut and color than what I currently had, and she outdid herself! She absolutely nailed everything about it!! Thank you, Addi!" },
         { reviewer: "Evan Walker", review: "Great experience for a first time trip to Ensemble Salon. Customer service is welcoming 10/10. The service is top tier. Cut and color for my beautiful girlfriend who was so happy with her new look. Thank you Addison for a superior cut." },
@@ -277,7 +277,7 @@ window.SCOOP_DATA = {
     },
     {
       name: "Juliana",
-      photo: "assets/images/champion-juliana.jpg",
+      photo: "/assets/images/champion-juliana.jpg",
       reviews: [
         { reviewer: "Josephine Quenette", review: "Juliana did a wonderful job taking care of me and my brother! She was very attentive and friendly, and I'm very happy with the service I received." },
         { reviewer: "Amanda Martinez", review: "Juliana is amazing, my hair never looked so good!! Not only did she give me a beautiful cut, she showed me how to style my hair to make my curls POP! She is the sweetest and I will only be going back to her from now on!" },
@@ -285,7 +285,7 @@ window.SCOOP_DATA = {
     },
     {
       name: "Mandi",
-      photo: "assets/images/champion-mandi.jpg?v=2",
+      photo: "/assets/images/champion-mandi.jpg?v=2",
       reviews: [
         { reviewer: "Ligia Gherman", review: "I've gone to Mandi at Ensemble twice this year already for extension installs. I have the k-tips and she was very knowledgeable and honest about all the kinds of extensions they offer and what they are before choosing k-tips." },
         { reviewer: "Lynn Smith", review: "Mandi did my hair extensions, and she did an amazing job! She took her time and was very meticulous with the placement of each K-tip extension." },
@@ -293,14 +293,14 @@ window.SCOOP_DATA = {
     },
     {
       name: "Erin",
-      photo: "assets/images/champion-erin.jpg",
+      photo: "/assets/images/champion-erin.jpg",
       reviews: [
         { reviewer: "Erin Redding", review: "I'm IN LOVE Erin, where have you been my whole HAIR LIFE?! And had the best time with my daughter, too! Thanks for doing both our new, fresh summer looks!" },
       ],
     },
     {
       name: "Tari",
-      photo: "assets/images/champion-tari.jpg",
+      photo: "/assets/images/champion-tari.jpg",
       reviews: [
         { reviewer: "Kat Lovesky", review: "Very thorough consultation and attention to the details for the haircut. It has been a struggle to find someone who cares and Tari really cared about the experience and the cut. Truly a great experience and a relief to know that someone still cares about not only the client and their needs but the cut and experience as well." },
       ],
