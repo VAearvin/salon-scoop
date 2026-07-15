@@ -115,13 +115,19 @@ window.SCOOP_DATA = {
 
   /* ---- 5. Staff Referral Contest (toggle with active) ---- */
   referralContest: {
-    active: false,
-    title: "Staff Referral Contest",
+    active: true,
+    title: "Retail Challenge",
     description:
-      "No referral contest running this month — check back soon for the next one!",
-    prize: "",
-    deadline: "",
-    howToEnter: [],
+      "A little friendly competition is on this month! Write your daily retail unit goal on the Retail Challenge poster, star the days you hit it, and earn a raffle ticket for every goal you reach. Let's support each other and make this our best retail month yet.",
+    prize:
+      "Raffle winner picks a gift card — grocery store, gas station, or a self-care day. Plus, the top retail seller at each salon earns a special surprise gift.",
+    deadline: "July 31, 2026",
+    howToEnter: [
+      "Each day, write your retail unit goal on the Retail Challenge poster.",
+      "Hit your goal? Give yourself a star. Miss it? Mark an X.",
+      "Every day you hit your goal earns you one raffle ticket.",
+      "At month's end, all tickets go into the drawing — two ways to win.",
+    ],
   },
 
   /* ---- 6. Culture Rewards & Prizes ---- */
