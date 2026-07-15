@@ -67,8 +67,8 @@ window.SCOOP_DATA = {
       },
       {
         icon: "sparkle",
-        title: "Selfie Wall Underway at 22 Changes",
-        body: "The client selfie wall at 22 Changes is officially in the works. Part one is complete, with a brand-new mirror installed and ready for photos. More to come as the rest of it comes together.",
+        title: "Selfie Walls Coming to Both Salons",
+        body: "Client selfie walls are officially in the works at both locations. At 22 Changes, part one is complete with a brand-new mirror installed and ready for photos — and Ensemble now has its selfie mirror up as well. More to come as the rest comes together.",
       },
     ],
   },
